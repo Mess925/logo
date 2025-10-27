@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logo/Signinpage.dart';
 import 'Signuppage.dart';
 
 class StartUpPage extends StatelessWidget {
@@ -99,7 +100,12 @@ class StartUpPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(35),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignInPage()),
+                  );
+                },
                 child: Text(
                   'Sign In',
                   style: TextStyle(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'Signinpage.dart';
+import 'Signuppage.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,63 +96,60 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  width: 325,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
-                    borderRadius: BorderRadius.circular(10),
+                Padding(
+                  padding: EdgeInsetsGeometry.symmetric(
+                    vertical: 0,
+                    horizontal: 30,
                   ),
-                  child: Padding(
-                    padding: EdgeInsetsGeometry.symmetric(
-                      horizontal: 30,
-                      vertical: 3,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Confirm Password',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Already have an account?',
-                      style: TextStyle(
-                        fontFamily: 'Calistoga',
-                        color: Colors.white,
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignInPage()),
-                        );
-                      },
-                      child: Text(
-                        'Sign In',
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Forgot your Password?',
                         style: TextStyle(
-                          color: Colors.black,
                           fontFamily: 'Calistoga',
-                          decoration: TextDecoration.underline,
+                          fontSize: 11,
+                          color: Colors.white,
                         ),
                       ),
-                    ),
-                  ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Don\'t have an account?',
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontFamily: 'Calistoga',
+                              color: Colors.white,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUpPage(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontFamily: 'Calistoga',
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 10),
                 InkWell(
                   onTap: () {
-                    //add next page here
+                    // new page here
                   },
                   child: Container(
                     width: 325,
@@ -163,7 +160,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        'Sign Up',
+                        'Sign In',
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Calistoga',
