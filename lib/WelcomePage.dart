@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'StartUp.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class Welcome extends StatefulWidget {
@@ -12,7 +11,7 @@ class WelcomePage extends State<Welcome> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => StartUpPage()),
@@ -27,7 +26,7 @@ class WelcomePage extends State<Welcome> {
       body: Center(
         child: Animate(
           effects: [
-            FadeEffect(duration: 500.ms),
+            FadeEffect(duration: 700.ms),
             ScaleEffect(delay: 300.ms),
           ],
           child: Text(

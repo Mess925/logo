@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Signuppage.dart';
 
 class StartUpPage extends StatelessWidget {
   const StartUpPage({Key? key}) : super(key: key);
@@ -55,7 +56,12 @@ class StartUpPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(35),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUpPage()),
+                  );
+                },
                 child: Text(
                   'Sign Up',
                   style: TextStyle(
