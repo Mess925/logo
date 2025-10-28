@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logo/name.dart';
 import 'Signinpage.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -152,7 +153,10 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(height: 10),
                 InkWell(
                   onTap: () {
-                    //add next page here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Name()),
+                    );
                   },
                   child: Container(
                     width: 325,
