@@ -62,7 +62,10 @@ flutter:
     - family: Calistoga
       fonts:
         - asset: assets/fonts/Calistoga-Regular.ttf
-        - asset: assets/image/image.png
+        - asset: assets/image/google.png
+        - asset: assets/image/logo_red.png
+        - asset: assets/image/logo_cream.png
+        - asset: assets/image/or_seperator.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

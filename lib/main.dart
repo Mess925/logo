@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:logo/WelcomePage.dart';
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: Welcome());
-  }
-}
+import 'welcome_page.dart';
+import 'startup_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(home: StartUp()),
+  );
 }
